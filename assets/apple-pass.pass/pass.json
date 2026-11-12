@@ -1,0 +1,21 @@
+{
+  "formatVersion": 1,
+  "passTypeIdentifier": "pass.com.bitvox.loyalty",
+  "serialNumber": "placeholder",
+  "teamIdentifier": "M9G2N9QD73",
+  "organizationName": "bitvox",
+  "description": "bitvox Loyalty Membership",
+  "backgroundColor": "rgb(25, 35, 50)",
+  "foregroundColor": "rgb(255, 255, 255)",
+  "labelColor": "rgb(190, 205, 220)",
+  "storeCard": {
+    "primaryFields": [],
+    "secondaryFields": [],
+    "auxiliaryFields": []
+  },
+  "barcode": {
+    "format": "PKBarcodeFormatQR",
+    "message": "placeholder",
+    "messageEncoding": "iso-8859-1"
+  }
+}

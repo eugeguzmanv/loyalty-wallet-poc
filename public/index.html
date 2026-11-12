@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Loyalty Wallet POC</title><link rel="stylesheet" href="/styles.css">
+  <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+</head>
+<body>
+<header><div><span class="eyebrow">TECH VALIDATION</span><h1>Loyalty Wallet POC</h1><p>Un flujo mínimo para probar membresías, sellos/puntos y pases Wallet.</p></div><span id="status" class="badge">Conectando…</span></header>
+<main>
+<section class="panel">
+  <h2>1. Configurar negocio demo</h2>
+  <form id="business-form" class="row">
+    <label>Negocio<input name="name" value="Demo Coffee" required></label>
+    <label>Programa<select name="programType"><option value="stamps">Sellos</option><option value="points">Puntos</option></select></label>
+    <label>Meta de sellos<input name="stampThreshold" type="number" min="2" value="8"></label>
+    <label>Puntos por visita<input name="pointsPerVisit" type="number" min="1" value="10"></label>
+    <button>Guardar configuración</button>
+  </form>
+</section>
+<section class="panel">
+  <h2>2. Crear cliente</h2>
+  <form id="member-form" class="row">
+    <label>Nombre<input name="name" required placeholder="Nombre del cliente"></label>
+    <label>Teléfono<input name="phone" placeholder="Opcional para esta demo"></label>
+    <button>Crear membresía</button>
+  </form>
+  <div id="new-member"></div>
+</section>
+<section class="panel">
+  <h2>3. Simular escaneo en caja</h2>
+  <p class="muted">Escanea el QR del cliente o pega el token. Cada escaneo válido representa una visita que el negocio autorizó.</p>
+  <div class="row">
+    <input id="scan-token" placeholder="Token QR">
+    <button id="scan-button">Registrar visita</button>
+    <button id="camera-button" class="secondary">Abrir cámara</button>
+  </div>
+  <div id="reader"></div><div id="scan-result"></div>
+</section>
+<section class="panel">
+  <h2>4. Membresías y Wallet</h2>
+  <div id="members"></div>
+</section>
+<section class="panel">
+  <h2>5. Registro de actividad</h2><div id="events"></div>
+</section>
+</main>
+<footer>POC local · No usar con datos reales de clientes · No incluye autenticación ni controles de producción.</footer>
+<script src="/app.js"></script>
+</body></html>

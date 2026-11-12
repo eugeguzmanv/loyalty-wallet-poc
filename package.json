@@ -1,0 +1,17 @@
+{
+  "name": "loyalty-wallet-poc",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "googleapis": "^144.0.0",
+    "passkit-generator": "^3.4.0",
+    "qrcode": "^1.5.4",
+    "dotenv": "^16.4.7"
+  }
+}
